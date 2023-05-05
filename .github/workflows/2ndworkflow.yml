@@ -1,11 +1,9 @@
 name: 2nd workflow for echoing
-on: push
+on: issues
 jobs:
-  issues:
+  output-info:
      runs-on: ubuntu-latest
      steps:
-       - name: Get code
-         uses: actions/checkout@v3
-       - name: get issues details
-         run: echo "${{toJSON(github.issues)}}"
+       - name: get event details
+         run: echo "${{toJSON(github.event)}}"
 
