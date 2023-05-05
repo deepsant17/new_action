@@ -1,0 +1,11 @@
+name: 2nd workflow for echoing
+on: push
+jobs:
+   issues:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Get code
+         uses: actions/checkout@v3
+       - name: get issues details
+         uses: echo "{{github.issues}}"
+
