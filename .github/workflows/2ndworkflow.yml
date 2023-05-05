@@ -1,7 +1,7 @@
 name: 2nd workflow for echoing
 on: push
 jobs:
-   issues:
+  issues:
      runs-on: ubuntu-latest
      steps:
        - name: Get code
